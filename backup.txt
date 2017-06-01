@@ -1,0 +1,70 @@
+
+        void onSamplingTimeRangeChanged(Integer[] samplingTimeRange);
+        void onTimeoutRangeChanged(Integer[] timeoutRange);
+        void onSchedulerIntervalRangeChanged(Integer[] schedulerIntervalRange);   
+		
+		
+        for (Listener ll : mListenerList) ll.onSamplingTimeRangeChanged(mSamplingTimeRange);
+        for (Listener ll : mListenerList) ll.onTimeoutRangeChanged(mTimeoutRange);
+        for (Listener ll : mListenerList)
+            ll.onSchedulerIntervalRangeChanged(mSchedulerIntervalRange);
+
+
+   public int getSamplingTimeMin() {
+        return mSamplingTimeMin;
+    }
+
+    public boolean setSamplingTimeMin(int samplingTimeMin) {
+
+        if (samplingTimeMin >= 0 && samplingTimeMin < mSamplingTimeMax) {
+
+            mSamplingTimeMin = samplingTimeMin;
+            setSamplingTimeRange();
+            return true;
+
+        } else return false;
+    }
+
+    public int getSamplingTimeMax() {
+        return mSamplingTimeMax;
+    }
+
+    public boolean setSamplingTimeMax(int samplingTimeMax) {
+
+        if (samplingTimeMax > mSamplingTimeMin) {
+
+            mSamplingTimeMax = samplingTimeMax;
+            setSamplingTimeRange();
+            return true;
+
+        } else return false;
+    }
+
+    public int getSamplingTimeStep() {
+        return mSamplingTimeStep;
+    }
+
+    public boolean setSamplingTimeStep(int samplingTimeStep) {
+
+        if (samplingTimeStep > 0) {
+
+            mSamplingTimeStep = samplingTimeStep;
+            setSamplingTimeRange();
+            return true;
+
+        } else return false;
+    }
+
+    public int setSamplingTimeRange(
+            int samplingTimeMin, int samplingTimeMax, int samplingTimeStep) {
+
+        // Returns binary mask
+        int returnValue =
+                (setSamplingTimeMin(samplingTimeMin) ? 1 : 0) +
+                        (setSamplingTimeMax(samplingTimeMax) ? 2 : 0) +
+                        (setSamplingTimeStep(samplingTimeStep) ? 4 : 0);
+
+        setSamplingTimeRange();
+
+        return returnValue;
+    }

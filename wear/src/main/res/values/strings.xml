@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AWLog</string>
+
+    <string name="loading">Loading...</string>
+
+    <string name="settings">Settings</string>
+
+    <string name="startstop">Start/Stop</string>
+    <string name="samplingtime">Sampling Time</string>
+    <string name="timeout">Timeout</string>
+    <string name="schedulerinterval">Interval</string>
+    <string name="batterythreshold">Battery Threshold</string>
+    <string name="calibrationtime">Calibration Time</string>
+
+    <string name="usewakelock">Use Wakelock</string>
+    <string name="uniquename">One File Per Log</string>
+    <string name="startonmotion">Start On Motion</string>
+    <string name="logaccelerometer">Log Accelerometer</string>
+    <string name="loggyroscope">Log Gyroscope</string>
+    <string name="loggravity">Log Gravity</string>
+
+    <string name="reset">Reset</string>
+    <string name="preview">Status</string>
+
+    <string name="notification_message">Running</string>
+    <string name="notification_logging">Logging</string>
+    <string name="notification_suspended">Suspended</string>
+    <string name="notification_nextlog">Next log at %s</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+        <TextView android:id="@+id/values_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/loading" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_centerInParent="true">
+                    <android.support.wearable.view.WearableListView
+                        android:id="@+id/values_list"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent">
+                    </android.support.wearable.view.WearableListView>
+                </FrameLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <TextView
+                    android:id="@+id/values_unit"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_centerInParent="true"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_gravity="left">
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+
+</RelativeLayout>

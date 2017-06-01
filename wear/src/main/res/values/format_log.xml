@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="prefix_acc">"ACC"</string>
+    <string name="prefix_gyr">"GYR"</string>
+    <string name="prefix_grv">"GRV"</string>
+    <string name="separator">","</string>
+    <string name="extension">"csv"</string>
+
+    <string name="format_float">"%1$12.8f"</string>
+    <string name="format_date_time">"%1$tY-%1$tm-%1$td_%1$tH-%1$tM-%1$tS"</string>
+    <string name="format_time">"%1$tH:%1$tM:%1$tS"</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/startstop_button"
+        android:text="Start"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:layout_height="@dimen/close_button_diameter"
+        android:layout_width="@dimen/close_button_diameter"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/start_button"
+        />
+</RelativeLayout>
